@@ -1,31 +1,49 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Trophy, Code2, Award, Rocket } from "lucide-react";
+import { Trophy, Code2, Award, ExternalLink } from "lucide-react";
 
 const achievements = [
   {
     icon: Code2,
-    title: "277+ Questions Solved",
-    description: "Solved 277+ questions across coding platforms, including CodeChef, building programming fundamentals and problem-solving skills.",
+    title: "285 CodeChef Problems Solved",
+    description: "Reached 285 problems solved and earned CodeChef's Problem Solver - Silver badge for passing 250 problems.",
     gradient: "from-cyan-500 to-blue-500",
+    source: { label: "CodeChef", href: "https://www.codechef.com/users/troop_club_35" },
   },
   {
     icon: Award,
-    title: "25-Day Coding Streak",
-    description: "Maintained a 25-day coding streak on CodeChef through consistent practice.",
+    title: "1,602 Peak CodeChef Rating",
+    description: "Reached a peak rating of 1,602, with a current rating of 1,548 (Division 3).",
     gradient: "from-purple-500 to-pink-500",
+    source: { label: "CodeChef", href: "https://www.codechef.com/users/troop_club_35" },
   },
   {
     icon: Trophy,
-    title: "CodeChef 5 Contests Badge",
-    description: "Earned the 5 Contests badge on CodeChef by participating in competitive programming contests.",
+    title: "25-Day CodeChef Streak",
+    description: "Earned CodeChef's Daily Streak - Silver badge for maintaining a 25-day practice streak.",
     gradient: "from-orange-500 to-red-500",
+    source: { label: "CodeChef", href: "https://www.codechef.com/users/troop_club_35" },
   },
   {
-    icon: Rocket,
-    title: "Building Practical Projects",
-    description: "Developing projects such as Intervista AI and Blogify to apply technical knowledge to practical applications.",
+    icon: Code2,
+    title: "16 LeetCode Problems Solved",
+    description: "Solved problems across all three difficulty levels: 9 Easy, 6 Medium, and 1 Hard.",
+    gradient: "from-yellow-500 to-orange-500",
+    source: { label: "LeetCode", href: "https://leetcode.com/u/Naitik1406/" },
+  },
+  {
+    icon: Trophy,
+    title: "8 Coding Contests Attended",
+    description: "Codolio lists 5 CodeChef contests and 3 CodeChef DSA contests.",
+    gradient: "from-blue-500 to-indigo-500",
+    source: { label: "Codolio", href: "https://codolio.com/profile/Naitik1406" },
+  },
+  {
+    icon: Award,
+    title: "62 GitHub Contributions",
+    description: "Recorded 62 contributions on GitHub over the past year.",
     gradient: "from-green-500 to-emerald-500",
+    source: { label: "GitHub", href: "https://github.com/Naitik1406" },
   },
 ];
 
@@ -62,6 +80,16 @@ const AchievementCard = ({ achievement, index, isInView }: { achievement: typeof
         <p className="text-muted-foreground leading-relaxed">
           {achievement.description}
         </p>
+        <a
+          href={achievement.source.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Verify ${achievement.title} on ${achievement.source.label}`}
+          className="inline-flex items-center gap-1.5 mt-4 text-sm text-primary hover:underline"
+        >
+          View on {achievement.source.label}
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
       </div>
     </motion.div>
   );

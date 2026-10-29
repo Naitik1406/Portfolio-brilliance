@@ -9,7 +9,7 @@ const highlights = [{
 }, {
   icon: Target,
   title: "Problem Solver",
-  description: "277+ problems solved across coding platforms"
+  description: "285 CodeChef problems solved"
 }, {
   icon: Lightbulb,
   title: "Quick Learner",
@@ -97,8 +97,8 @@ const AboutSection = () => {
               {/* Stats */}
               <div className="flex flex-wrap gap-8 pt-4">
                 <div>
-                  <div className="text-3xl font-bold text-gradient">277+</div>
-                  <div className="text-sm text-muted-foreground">Questions Solved</div>
+                  <div className="text-3xl font-bold text-gradient">285</div>
+                  <div className="text-sm text-muted-foreground">CodeChef Problems</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-gradient">8.3</div>
