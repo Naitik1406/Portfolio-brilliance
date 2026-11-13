@@ -77,13 +77,20 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
+    margin: 0;
     background: hsl(var(--background));
     color: hsl(var(--foreground));
     -webkit-font-smoothing: antialiased;
     font-family: var(--font-sans);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 }
 
@@ -143,21 +150,21 @@
 
   /* Section styling */
   .section-padding {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   @media (min-width: 768px) {
     .section-padding {
-      padding-top: 7rem;
-      padding-bottom: 7rem;
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .section-padding {
-      padding-top: 8rem;
-      padding-bottom: 8rem;
+      padding-top: 7rem;
+      padding-bottom: 7rem;
     }
   }
 

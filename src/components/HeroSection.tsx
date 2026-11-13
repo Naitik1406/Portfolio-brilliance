@@ -18,7 +18,7 @@ const FloatingShape = ({
   delay
 }} />;
 const HeroSection = () => {
-  return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
+  return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden py-28 sm:py-32 md:py-0" style={{
     background: "var(--gradient-hero)"
   }}>
       {/* Floating background shapes */}
@@ -57,7 +57,7 @@ const HeroSection = () => {
             }} transition={{
               delay: 0.3,
               duration: 0.8
-            }} className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+            }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
               Hi, I'm{" "}
               <span className="text-gradient">Naitik Singhal</span>
             </motion.h1>
@@ -102,10 +102,10 @@ const HeroSection = () => {
               delay: 0.7,
               duration: 0.8
             }} className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 mb-8">
-              <a href="#projects" className="btn-glow px-8 py-4 rounded-xl font-semibold text-primary-foreground transition-all">
+              <a href="#projects" className="btn-glow w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-primary-foreground transition-all">
                 View Projects
               </a>
-              <a href="#contact" className="px-8 py-4 rounded-xl font-semibold glass-card hover:bg-secondary/50 transition-all">
+              <a href="#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold glass-card hover:bg-secondary/50 transition-all">
                 Get in Touch
               </a>
             </motion.div>
@@ -118,7 +118,7 @@ const HeroSection = () => {
             }} transition={{
               delay: 0.9,
               duration: 0.8
-            }} className="flex items-center justify-center md:justify-start gap-6">
+            }} className="flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4">
               <a href="https://github.com/Naitik1406" target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl glass-card hover:bg-secondary/50 transition-all group" aria-label="GitHub">
                 <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>

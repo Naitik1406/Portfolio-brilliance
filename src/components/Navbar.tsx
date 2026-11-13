@@ -47,7 +47,7 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-8">
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.name}
@@ -71,7 +71,7 @@ const Navbar = () => {
             href={hireEmailUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex px-5 py-2.5 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="hidden lg:inline-flex px-5 py-2.5 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
           >
             Hire Me
           </motion.a>
@@ -79,8 +79,10 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -94,15 +96,16 @@ const Navbar = () => {
             opacity: isMobileMenuOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden"
+          id="mobile-navigation"
+          className="lg:hidden overflow-hidden"
         >
-          <div className="pt-6 pb-4 space-y-4">
+          <div className="grid grid-cols-2 gap-x-5 gap-y-1 pt-6 pb-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-muted-foreground hover:text-foreground transition-colors py-2"
+                className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.name}
               </a>
@@ -111,7 +114,7 @@ const Navbar = () => {
               href={hireEmailUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex px-5 py-2.5 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-4"
+              className="col-span-2 inline-flex w-fit px-5 py-2.5 mt-3 rounded-lg text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Hire Me
             </a>

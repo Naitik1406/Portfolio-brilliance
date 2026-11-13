@@ -92,9 +92,9 @@ const ContactSection = () => {
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="text-sm text-muted-foreground">{item.label}</p>
-                    <p className="text-foreground font-medium group-hover:text-primary transition-colors">
+                    <p className="text-foreground font-medium group-hover:text-primary transition-colors [overflow-wrap:anywhere]">
                       {item.value}
                     </p>
                   </div>

@@ -102,8 +102,8 @@ const CertificatesSection = () => {
                     <div className="w-12 h-12 shrink-0 rounded-xl bg-primary/10 flex items-center justify-center">
                       <Award className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground">{certificate.title}</h3>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-xl font-bold text-foreground break-words">{certificate.title}</h3>
                       {certificate.issuer && (
                         <p className="text-primary font-medium mt-1">{certificate.issuer}</p>
                       )}
